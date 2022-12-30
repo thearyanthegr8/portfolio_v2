@@ -1,0 +1,172 @@
+@import "../variables";
+
+.light {
+    background-color: $l-nav-bg;
+    color: $l-text-color;
+
+    svg{
+        color: $l-text-color;
+        height: 20px;
+    }
+
+    .Link {
+        color: $l-text-color;
+
+        &:hover {
+            color: $signature-red;
+        }
+    }
+
+    .theme-changer {
+        color: $l-text-color;
+
+        &:hover {
+            color: $signature-red;
+        }
+    }
+
+    @media screen and (max-width: $size-large-desktops) {
+        .Link {
+            background-color: $l-nav-bg;
+        }
+    }
+}
+
+.dark {
+    background-color: $d-nav-bg;
+    color: $d-text-color;
+
+    svg{
+        color: $d-text-color;
+        height: 20px;
+    }
+
+    .Link {
+        color: $d-text-color;
+
+        &:hover {
+            color: $signature-red;
+        }
+    }
+
+    .theme-changer {
+        color: $d-text-color;
+
+        &:hover {
+            color: $signature-red;
+        }
+    }
+
+    @media screen and (max-width: $size-large-desktops) {
+        .Link {
+            background-color: $d-nav-bg;
+        }
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    display: flex;
+    margin: 0 $side-margin;
+    position: relative;
+    width: calc(100% - $side-margin);
+    min-height: 10vh;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    @media screen and (max-width: $size-large-desktops) {
+        margin: 0 $small-side-margin;
+        width: calc(100% - $small-side-margin);
+    }
+
+    .Link {
+        text-decoration: none;
+        margin: 0 2rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .links {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .openMenu {
+        @media screen and (max-width: $size-large-desktops) {
+            display: flex;
+            position: absolute;
+            left: -$small-side-margin;
+            transform: translateX(0);
+            height: 90vh;
+            width: 100vw;
+            top: 10vh;
+            z-index: 1;
+            justify-content: center;
+
+            .Link {
+                text-align: center;
+                display: flex;
+                margin: 0;
+                height: 22.5vh;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .closeMenu {
+        @media screen and (max-width: $size-large-desktops) {
+            display: none;
+        }
+    }
+
+    .right {
+        position: absolute;
+        right: $side-margin;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: $size-large-desktops) {
+            right: calc($small-side-margin + 2rem);
+        }
+
+    }
+    
+    .linkBtn {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+
+        .theme-changer {
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+        }
+    }
+
+    .close {
+        display: none;
+
+        @media screen and (max-width: $size-large-desktops) {
+            display: block;
+            position: absolute;
+            right: $small-side-margin;
+        }
+    }
+
+    .openMenu {
+        display: block;
+    }
+}
