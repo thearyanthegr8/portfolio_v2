@@ -1,0 +1,17 @@
+@import "../variables";
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    .section1 {
+        background-color: $signature-red;
+        height: 100vh;
+        width: 50%;
+    }
+    .section2 {
+        height: 100vh;
+        width: 50%;
+    }
+}

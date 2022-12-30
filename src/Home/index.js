@@ -1,8 +1,15 @@
+import { useContext } from "react";
+import { ThemeContext } from "../themeContext";
+import "./home.scss";
+
 const HomePage = () => {
-    return ( 
-        <>
-            <h1>This is the homepage</h1>
-        </>
+    const { theme } = useContext(ThemeContext);
+
+    return (
+        <div className={`background`}>
+            <div className="section1"></div>
+            <div className="section2 "></div>
+        </div>
     );
 }
  

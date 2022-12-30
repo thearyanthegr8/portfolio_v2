@@ -10,10 +10,10 @@
     }
 
     .Link {
-        color: $l-text-color;
+        color: $l-nav-link;
 
         &:hover {
-            color: $signature-red;
+            color: $l-text-color;
         }
     }
 
@@ -30,6 +30,10 @@
             background-color: $l-nav-bg;
         }
     }
+
+    .active {
+        color: $l-text-color;
+    }
 }
 
 .dark {
@@ -42,10 +46,10 @@
     }
 
     .Link {
-        color: $d-text-color;
+        color: $d-nav-link;
 
         &:hover {
-            color: $signature-red;
+            color: $d-text-color;
         }
     }
 
@@ -54,6 +58,7 @@
 
         &:hover {
             color: $signature-red;
+            
         }
     }
 
@@ -71,6 +76,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    backdrop-filter: blur(5px);
 }
 
 .container {
@@ -169,4 +175,6 @@
     .openMenu {
         display: block;
     }
+
+    
 }
