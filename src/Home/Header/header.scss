@@ -1,0 +1,206 @@
+@import "../../variables";
+
+.lighthome {
+    .header-section2 {
+        background-color: $l-main-bg;
+    }
+    .content {
+        color: $l-text-color;
+        button {
+            color: $l-text-color;
+            .bg1 {
+                background-color: $l-main-bg;
+            }
+            .background2 {
+                background-color: $l-main-bg;
+            }
+        }
+    }
+}
+
+.darkhome {
+    .background {
+        .header-section2 {
+            background-color: $d-main-bg;
+        }
+    }
+    .content {
+        color: $d-text-color;
+        button {
+            color: $d-text-color;
+            .bg1 {
+                background-color: $d-main-bg;
+            }
+            .background2 {
+                background-color: $d-main-bg;
+            }
+        }
+    }
+}
+
+.heroSection {
+    overflow: hidden;
+    
+    .background {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        position: relative;
+        z-index: 0;
+    
+        .header-section1 {
+            background-color: $signature-red;
+            height: 100vh;
+            width: 50%;
+            z-index: 1;
+        }
+        .header-section2 {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .text {
+        transform-style: preserve-3d;
+        will-change: transform;
+
+            /* Slight parallax effect on hover */
+        &:hover {
+            transform: translateZ(12px);
+        }
+
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        .content {
+            .only-text {
+                z-index: 2;
+
+                h6 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    letter-spacing: 0.1rem;
+                    margin: 0;
+                }
+        
+                h5 {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    margin: 0;
+                }
+        
+                h1 {
+                    font-size: 6rem;
+                    font-weight: 900;
+                    font-style: italic;
+                    letter-spacing: -0.3rem;
+                    margin: 0;
+                }
+        
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    font-style: italic;
+                    letter-spacing: 0.1rem;
+                    margin: 1rem 0;
+                }
+            }
+
+            button {
+                font-family: "Poppins", sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 0.05rem;
+                cursor: pointer;
+                margin: .5rem 0;
+                padding: .7rem 1rem;
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) !important;
+                z-index: 10;
+
+                &:hover {
+                    .backgrounds .bg3 {
+                        left: 100%;
+                    }
+                }
+    
+                .backgrounds {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    .bg1 {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: calc(50% + 0.5px);
+                        height: 100%;
+                        
+                    }
+                    .bg2 {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: calc(50% + 0.5px);
+                        height: 100%;
+                        background-color: $signature-red;
+                    }
+                    .bg3 {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        transition: all 0.1s;
+
+                        .background1 {
+                            position: absolute;
+                            top: 2px;
+                            left: 2px;
+                            width: calc(50% - 2px);
+                            height: calc(100% - 4px);
+                            background-color: $signature-red;
+                        }
+                        .background2 {
+                            position: absolute;
+                            top: 2px;
+                            right: 2px;
+                            width: calc(50% - 2px);
+                            height: calc(100% - 4px);
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+
+    @media screen and (max-width: $size-large-desktops) {
+        display: none;
+    }
+}

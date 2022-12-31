@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.lightscroll {
+    background-color: $l-main-bg;
+
+    &:before {
+        background-image : linear-gradient(to left, 
+                    rgba(255,255,255, 0), 
+                    $l-main-bg 100%);
+    }
+
+    &:after {
+        background-image : linear-gradient(to right, 
+                    rgba(255,255,255, 0), 
+                    $l-main-bg 100%);
+    }
+}
+
+.darkscroll {
+    background-color: $d-main-bg;
+
+    &:before {
+        background-image : linear-gradient(to left, 
+                    rgba(255,255,255, 0), 
+                    $d-main-bg 100%);
+    }
+
+    &:after {
+        background-image : linear-gradient(to right, 
+                    rgba(255,255,255, 0), 
+                    $d-main-bg 100%);
+    }
+}
+
+.scroll-container {
+    width: 100vw;
+    position: relative;
+    padding: 1.5rem 0;
+    overflow: hidden;
+
+    .logo-container {
+        margin: 0 2rem;
+        cursor: pointer;
+    }
+
+    .logos {
+        width: 3rem;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 12.5%;
+        opacity: 0.95;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 12.5%;
+        opacity: 0.95;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
