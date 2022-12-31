@@ -1,6 +1,6 @@
 @import "../variables";
 
-.light {
+.lightnavbar {
     background-color: $l-nav-bg;
     color: $l-text-color;
 
@@ -28,6 +28,7 @@
     @media screen and (max-width: $size-large-desktops) {
         .Link {
             background-color: $l-nav-bg;
+
         }
     }
 
@@ -36,7 +37,7 @@
     }
 }
 
-.dark {
+.darknavbar {
     background-color: $d-nav-bg;
     color: $d-text-color;
 
@@ -63,8 +64,10 @@
     }
 
     @media screen and (max-width: $size-large-desktops) {
-        .Link {
-            background-color: $d-nav-bg;
+        .container {
+            .Link {
+                background-color: $d-nav-bg;
+            }
         }
     }
 }
@@ -76,7 +79,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    backdrop-filter: blur(5px);
+}
+
+.navbar:before {
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
 }
 
 .container {
@@ -110,6 +124,7 @@
     }
 
     .openMenu {
+        backdrop-filter: blur(5px);
         @media screen and (max-width: $size-large-desktops) {
             display: flex;
             position: absolute;
@@ -120,6 +135,7 @@
             top: 10vh;
             z-index: 1;
             justify-content: center;
+            
 
             .Link {
                 text-align: center;
