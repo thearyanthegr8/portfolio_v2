@@ -15,7 +15,7 @@ function Header({url}) {
                 <motion.div className="header-section2"></motion.div>
             </div>
             
-            <div className="text">
+            <motion.div className="text">
             <canvas id="canvas" />
                 <motion.div animate={{scale: [10, 0.8, 1.3, 0.9, 1.1, 1]}} transition={{duration: 1}} className="content">
                     <div className="only-text">
@@ -36,7 +36,7 @@ function Header({url}) {
                         </div>
                     </motion.button>
                 </motion.div>
-            </div>
+            </motion.div>
         </div>
     );
 }

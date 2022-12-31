@@ -1,12 +1,15 @@
 import Header from "./Header";
 import HorizontalScroll from "./HorizontalScroll";
 import "./home.scss";
+import About from "./About";
 
-const HomePage = () => {
+function HomePage() {
+
     return (
         <>
             <Header />
             <HorizontalScroll />
+            <About />
         </>
     );
 }
