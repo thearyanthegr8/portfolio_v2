@@ -2,6 +2,8 @@ import Header from "./Header";
 import HorizontalScroll from "./HorizontalScroll";
 import "./home.scss";
 import About from "./About";
+import Project from "./Projects";
+import Footer from "../Components/Footer";
 
 function HomePage() {
 
@@ -10,6 +12,8 @@ function HomePage() {
             <Header />
             <HorizontalScroll />
             <About />
+            <Project />
+            <Footer />
         </>
     );
 }

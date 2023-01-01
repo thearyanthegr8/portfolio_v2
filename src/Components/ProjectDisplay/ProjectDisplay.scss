@@ -1,0 +1,154 @@
+@import "../../variables";
+
+.lightprojectDisplay {
+    .projectContent {
+        .summary {
+            background-color: $l-diff-bg;
+        }
+
+        .languages {
+            color: $l-nav-link;
+        }
+
+        .Github{
+            color: $l-nav-link;
+
+            &:hover {
+                color: $l-text-color;
+            }
+        }
+    }
+}
+
+.darkprojectDisplay {
+    .projectContent {
+        .summary {
+            background-color: $d-diff-bg;
+        }
+
+        .languages {
+            color: $d-nav-link;
+        }
+
+        .Github{
+            color: $d-nav-link;
+
+            &:hover {
+                color: $d-text-color;
+            }
+        }
+    }
+}
+
+.FloatRight {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    position: relative;
+}
+
+.FloatLeft {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+}
+
+.projectContainer {
+    width: 100%;
+    align-items: center;
+    margin: 5rem 0;
+
+    .projectContent {
+        position: absolute;
+        width: 50%;
+        z-index: 1;
+
+        h5 {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 0.25rem;
+            margin-bottom: 0.25rem;
+            color: $signature-red;
+        }
+
+        h1 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .summary {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            padding: 2rem 4rem;
+            margin-bottom: 1rem;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                box-shadow: 5px 5px 40px 10px #88888840;
+            }
+        }
+
+        .languages {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+        }
+
+        .languageLeft {
+            justify-content: flex-end;
+
+            p {
+                margin-left: 1rem;
+            }
+        }
+
+        .languageRight {
+            justify-content: flex-start;
+
+            p {
+                margin-right: 1rem;
+            }
+        }
+
+        .linkLeft{
+            .Github {
+                position: absolute;
+                right: 0%;
+            }
+        }
+
+        .linkRight{
+            .Github {
+                position: absolute;
+                left: 0%;
+            }
+        }
+        
+    }
+
+    .contentLeft {
+        text-align: right;
+        right: 0;
+    }
+
+    .contentRight {
+        left: 0;
+    }
+
+    .coverImage {
+        aspect-ratio: 16/9;
+        width: 60%;
+        object-fit: cover;
+    }
+
+    .imageRight {
+        justify-self: flex-end;
+    }
+}

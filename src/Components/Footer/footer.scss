@@ -1,0 +1,98 @@
+@import "../../variables";
+
+.footerContainer {
+    border-top: 1px solid $signature-red;
+    display: flex;
+    padding: $top-margin $side-margin;
+    background-color: $d-main-bg;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex: 3;
+        padding-right: 10vw;
+
+        .info {
+            h1 {
+                font-size: 4.5rem;
+                font-weight: 900;
+                font-style: italic;
+                letter-spacing: -0.3rem;
+                margin: 0;
+                text-transform: uppercase;
+                color: $d-text-color;
+            }
+
+            .email {
+                color: $signature-red;
+                font-style: italic;
+            }
+
+            h3 {
+                margin-top: -1rem;
+                color: $signature-red;
+                font-size: 1.5rem;
+            }
+        }
+
+        .variousLinks {
+            margin-top: 1rem;
+            display: flex;
+            width: 100%;
+            position: relative;
+
+            .company {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .navigations {
+                position: absolute;
+                right: 0;
+            }
+
+            .h3Links {
+                font-family: "Poppins", sans-serif;
+                height: 100%;
+                
+                h2, h3 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    margin: 1rem 0;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    font-weight: 600;
+                    color: $signature-red;
+                }
+
+                h3 {
+                    margin: 0.5rem 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $d-text-color;
+                }
+            }
+
+        }
+    }
+
+    .Map {
+        flex: 2;
+        aspect-ratio: 16/9;
+        width: 30vw;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            box-shadow: 5px 5px 40px 10px #88888840;
+        }
+
+    }
+}

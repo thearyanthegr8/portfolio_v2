@@ -1,7 +1,7 @@
 @import "../../variables";
 
 .lightabout {
-    background-color: $l-main-bg;
+    background-color: $l-diff-bg;
     color: $l-text-color;
     .aboutContent {
         button {
@@ -11,7 +11,7 @@
 }
 
 .darkabout {
-    background-color: $d-main-bg;
+    background-color: $d-diff-bg;
     color: $d-text-color;
     .aboutContent {
         button {
@@ -79,9 +79,10 @@
                 background-color: transparent;
                 border: 1.5px solid $signature-red;
                 transition: all 0.1s ease-in-out;
-    
+
                 &:hover {
                     background-color: $signature-red;
+                    box-shadow: 5px 5px 40px 10px #88888840;
                 }
             }
         }
